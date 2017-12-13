@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>homepage</title>
-</head>
-<body>
+@extends('layouts.default')
+
+@section('title','主页')
+@section('content')
 	<h1>主页</h1>
-</body>
-</html>
+@stop
