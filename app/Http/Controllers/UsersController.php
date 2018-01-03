@@ -99,6 +99,8 @@ class UsersController extends Controller
 
     public function confirmEmail($token){
         $user = User::where('activation_token', $token)->firstOrFail();
+        //User 方法对数据库中的用户查找activation_token字段和对应的值$token匹配并返回第一个用户，
+        //查询不到则返回404
         $user->activated = true;
         $user->activation_token = null;
         $user->save();
